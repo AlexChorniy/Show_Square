@@ -1,0 +1,44 @@
+.App {
+  background-color: grey;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );
+}
+
+.square {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+}
+
+.square.hidden {
+  animation: hide_square 4s linear;
+  visibility: hidden;
+}
+
+.square.visible {
+  animation: show_square 4s linear;
+  visibility: visible;
+}
+
+@keyframes hide_square {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes show_square {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
